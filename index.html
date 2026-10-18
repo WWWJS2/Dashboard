@@ -15,8 +15,8 @@ body{margin:0;background:linear-gradient(180deg,#f7f4ef,var(--bg));color:var(--i
 .app{max-width:430px;margin:auto;padding:14px 14px 90px}
 .header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
 .brand{display:flex;align-items:center;gap:9px}
-.logo{width:72px;height:72px;border-radius:0;overflow:visible;background:transparent;border:0;box-shadow:none;display:flex;align-items:center;justify-content:center}
-.logo img{width:72px;height:72px;object-fit:contain;display:block;filter:none}
+.logo{width:58px;height:58px;display:flex;align-items:center;justify-content:center;color:#171513;flex:0 0 58px}
+.logo svg{width:58px;height:58px;display:block}
 .brand h1{margin:0;font-size:16px;font-weight:700;line-height:1}
 .brand p{margin:4px 0 0;font-size:9px;color:var(--muted)}
 .ready{font-size:9px;font-weight:600;color:#526954;background:#e7eee6;border:1px solid #d6e1d5;padding:6px 8px;border-radius:999px}
@@ -60,15 +60,27 @@ body{margin:0;background:linear-gradient(180deg,#f7f4ef,var(--bg));color:var(--i
 <div class="app">
 <header class="header">
   <div class="brand">
-    <div class="logo"><img src="logo.svg" alt="شعار خُطى"></div>
-    <div><h1>خُطى</h1></div>
+    <div class="logo" aria-label="شعار خُطى">
+<svg viewBox="0 0 180 180" role="img" aria-hidden="true">
+  <g fill="none" stroke="currentColor" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M40 103c7-27 25-49 55-62l-10-19 26 13 15-8-8 25c12 10 18 23 15 37-4 20-21 34-42 34H61"/>
+    <path d="M65 61 38 47l12 28-20 22h33"/>
+    <path d="M92 42c5 10 5 20 0 30"/>
+    <path d="M112 71c3 0 5 2 5 5"/>
+    <path d="M45 112c15-2 25-9 32-20"/>
+    <path d="M51 120c16-3 29-10 38-22"/>
+  </g>
+  <text x="90" y="163" text-anchor="middle" fill="currentColor" font-size="42" font-family="Tahoma, Arial, sans-serif" font-weight="700">خُطى</text>
+</svg>
+</div>
+    <div><h1>خُطى</h1><p>Smart Horse Monitor</p></div>
   </div>
   
 </header>
 
 <section class="hero">
   <div class="kicker">KHUTA SMART HORSE MONITOR</div>
-  <h2>لوحة خُطى</h2>
+  <h2>لوحة المراقبة</h2>
   <p>متابعة الحرارة والسرعة والتسارع والموقع من جهاز خُطى القابل للارتداء.</p>
   <div class="stats">
     <div class="stat"><span>ESP32</span><b>جاهز</b></div>
