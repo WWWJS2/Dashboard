@@ -13,12 +13,12 @@
 *{box-sizing:border-box}
 body{margin:0;background:linear-gradient(180deg,#f7f4ef,var(--bg));color:var(--ink);font-family:"IBM Plex Sans Arabic",Tahoma,Arial,sans-serif}
 .app{max-width:430px;margin:auto;padding:14px 14px 90px}
-.header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
-.brand{display:flex;align-items:center;gap:9px}
-.logo{width:58px;height:58px;display:flex;align-items:center;justify-content:center;color:#171513;flex:0 0 58px}
-.logo svg{width:58px;height:58px;display:block}
-.brand h1{margin:0;font-size:16px;font-weight:700;line-height:1}
-.brand p{margin:4px 0 0;font-size:9px;color:var(--muted)}
+.header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;background:#232323;border-radius:20px;padding:9px 14px;color:#fff}
+.brand{display:flex;align-items:center;gap:10px}
+.logo{width:62px;height:62px;display:flex;align-items:center;justify-content:center;flex:0 0 62px;overflow:hidden}
+
+.brand h1{margin:0;font-size:17px;font-weight:700;line-height:1;color:#fff}
+.brand p{margin:4px 0 0;font-size:8px;color:#b9afa5;letter-spacing:.4px}
 .ready{font-size:9px;font-weight:600;color:#526954;background:#e7eee6;border:1px solid #d6e1d5;padding:6px 8px;border-radius:999px}
 .hero{background:var(--dark);color:#fff;border-radius:22px;padding:18px;margin-bottom:12px}
 .kicker{font-size:9px;letter-spacing:1.4px;color:#bca991;margin-bottom:6px}
@@ -54,26 +54,15 @@ body{margin:0;background:linear-gradient(180deg,#f7f4ef,var(--bg));color:var(--i
 .nav{position:fixed;left:50%;bottom:10px;transform:translateX(-50%);width:min(410px,calc(100% - 22px));background:rgba(255,253,249,.95);backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:19px;padding:6px;display:grid;grid-template-columns:repeat(4,1fr);box-shadow:0 10px 24px rgba(71,60,49,.1)}
 .nav div{text-align:center;color:#8b8178;font-size:7px;padding:6px;border-radius:12px}.nav .active{background:#e9e0d6;color:#4e4034}
 .nav svg{width:16px;height:16px;display:block;margin:0 auto 2px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.logo img{width:62px;height:82px;object-fit:cover;object-position:center;display:block;mix-blend-mode:normal}
 </style>
 </head>
 <body>
 <div class="app">
 <header class="header">
   <div class="brand">
-    <div class="logo" aria-label="شعار خُطى">
-<svg viewBox="0 0 180 180" role="img" aria-hidden="true">
-  <g fill="none" stroke="currentColor" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M40 103c7-27 25-49 55-62l-10-19 26 13 15-8-8 25c12 10 18 23 15 37-4 20-21 34-42 34H61"/>
-    <path d="M65 61 38 47l12 28-20 22h33"/>
-    <path d="M92 42c5 10 5 20 0 30"/>
-    <path d="M112 71c3 0 5 2 5 5"/>
-    <path d="M45 112c15-2 25-9 32-20"/>
-    <path d="M51 120c16-3 29-10 38-22"/>
-  </g>
-  <text x="90" y="163" text-anchor="middle" fill="currentColor" font-size="42" font-family="Tahoma, Arial, sans-serif" font-weight="700">خُطى</text>
-</svg>
-</div>
-    <div><h1>خُطى</h1><p>Smart Horse Monitor</p></div>
+    <div class="logo"><img src="data:image/jpeg;base64,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" alt="شعار خُطى الأصلي"></div>
+<div><h1>خُطى</h1><p>Smart Horse Monitor</p></div>
   </div>
   
 </header>
