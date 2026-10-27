@@ -12,7 +12,7 @@
 :root{--bg:#f3efe8;--card:#fffdf9;--ink:#181716;--muted:#7a746d;--line:#ded7ce;--dark:#181818;--brown:#7d6650;--green:#6d856e;--warn:#b27f47}
 *{box-sizing:border-box}
 body{margin:0;background:linear-gradient(180deg,#f7f4ef,var(--bg));color:var(--ink);font-family:"IBM Plex Sans Arabic",Tahoma,Arial,sans-serif}
-.app{max-width:430px;margin:auto;padding:14px 14px 90px}
+.app{max-width:430px;margin:auto;padding:14px}
 .header{display:flex;align-items:center;justify-content:flex-start;margin-bottom:12px;padding:0;background:transparent;color:var(--ink);border-radius:0}
 .brand{display:flex;align-items:center;gap:10px}
 .logo{width:86px;height:86px;display:flex;align-items:center;justify-content:center;flex:0 0 86px;overflow:visible;background:transparent;border:0;box-shadow:none}
@@ -51,9 +51,6 @@ body{margin:0;background:linear-gradient(180deg,#f7f4ef,var(--bg));color:var(--i
 .device:last-child{border-bottom:0}
 .device b{font-size:9px}.device small{display:block;font-size:7px;color:#918b84;margin-top:2px}
 .state{font-size:7px;color:#bdb6ae;background:#252525;border:1px solid #333;border-radius:999px;padding:5px 7px}.state.ok{color:#b9d2bb;background:#1d251d;border-color:#334333}
-.nav{position:fixed;left:50%;bottom:10px;transform:translateX(-50%);width:min(410px,calc(100% - 22px));background:rgba(255,253,249,.95);backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:19px;padding:6px;display:grid;grid-template-columns:repeat(4,1fr);box-shadow:0 10px 24px rgba(71,60,49,.1)}
-.nav div{text-align:center;color:#8b8178;font-size:7px;padding:6px;border-radius:12px}.nav .active{background:#e9e0d6;color:#4e4034}
-.nav svg{width:16px;height:16px;display:block;margin:0 auto 2px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .logo img{width:86px;height:86px;object-fit:contain;display:block;background:transparent;border:0;box-shadow:none}
 </style>
 </head>
@@ -112,12 +109,6 @@ body{margin:0;background:linear-gradient(180deg,#f7f4ef,var(--bg));color:var(--i
 </section>
 </div>
 
-<nav class="nav">
-  <div class="active"><svg viewBox="0 0 24 24"><path d="m4 11 8-7 8 7"/><path d="M6 10v9h12v-9"/></svg>الرئيسية</div>
-  <div><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg>الموقع</div>
-  <div><svg viewBox="0 0 24 24"><path d="M5 19V10M12 19V5M19 19v-7"/></svg>البيانات</div>
-  <div><svg viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="2"/></svg>الجهاز</div>
-</nav>
 
 <script>
 function r(a,b,d=1){return(Math.random()*(b-a)+a).toFixed(d)}
